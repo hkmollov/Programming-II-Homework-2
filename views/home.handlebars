@@ -1,0 +1,28 @@
+<ul class="messages">
+    {{#messages}}
+    <li class="message-list">
+        <div class="message-username">
+            {{author}}
+        </div>
+        <div class="message-date">
+            {{date}}
+        </div>
+        <div class="message-text">
+            {{text}}
+        </div>
+    </li>
+    {{/messages}}
+</ul>
+<form action="/next" method="post">
+    <div class="form-row">
+        <label for="a">Username:</label>
+        <input type="text" name="author" id="a">
+    </div>
+    <div class="form-row">
+        <label for="b">Your Message</label>
+        <textarea name="text" id="b" rows="4"></textarea>
+    </div>
+    <div class="form-controls">
+        <button type="submit">Send</button>
+    </div>
+</form>
